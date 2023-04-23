@@ -1,8 +1,9 @@
 var express = require('express');
 var app = express();
+const port = process.env.PORT || 3000
 
 app.use('/', require('./routes'));
 
 app.listen(3000, () => {
-    console.log('Server has found port 3000 and everything is working')
+    console.log(`Server has found port ${port} and everything is working`)
 });
