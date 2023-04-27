@@ -1,5 +1,40 @@
 // local 
 ### 
-GET http://localhost:8080/contacts ### GET http://localhost:8080/contacts/6444c10681edfae90cbdb6a42
+GET http://localhost:8080/contacts 
+### 
+POST http://localhost:8080/contacts HTTP/1.1 content-type: application/json
 
-GET https://cse341-3x4y.onrender.com HTTP/1.1
+{
+    "firstName":"Madelyn", "lastName":"Day", "email":"lynD@test.com", "favoriteColor":"Purple", "birthday":"05/05"
+}
+###
+
+PUT http://localhost:8080/contacts/6449d0ea506f146095d65a18 HTTP/1.1 content-type: application/json 
+
+{
+    "firstName":"Madelyn", "lastName":"Day", "email":"lynDay@test.com", "favoriteColor":"Purple", "birthday":"05/05"
+}
+
+###
+DELETE http://localhost:8080/contacts/6449d0ea506f146095d65a18 HTTP/1.1
+// prod 
+### 
+GET https://cse341-3x4y.onrender.com/contacts
+
+### 
+GET https://cse341-3x4y.onrender.com/contacts/6449d0ea506f146095d65a18
+
+###
+
+POST http://cse341-3x4y.onrender.com/contacts HTTP/1.1 content-type: application/json
+
+{
+    "firstName":"Madelyn", "lastName":"Day", "email":"lynD@test.com", "favoriteColor":"Purple", "birthday":"05/05"
+}
+###
+
+PUT http://localhost:8080/contacts/6449d0ea506f146095d65a18 HTTP/1.1 content-type: application/json 
+
+{
+    "firstName":"Madelyn", "lastName":"Day", "email":"lynDay@test.com", "favoriteColor":"Purple", "birthday":"05/05"
+}
